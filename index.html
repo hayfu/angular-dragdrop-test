@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>Angular Test</title>
+
+	<link href="css/style.css" rel="stylesheet" />
+
+	<!--angularjs-->
+	<script src="js/angular.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+	<div ng-app="my-app" ng-controller="MainController">
+		<!--use Draggable directives-->
+		 <div class="container1">
+			<header><h1>Draggables</h1></header>
+			<section>
+				<div draggable="true" ng-repeat="drag_type in drag_types">      
+					<img  src='{{drag_type}}'/>
+				</div>
+			</section>
+		</div>
+		<!--use Droppable directives-->
+		<div class="container2">
+			<header><h1>Drop Schtuff Here</h1></header>
+			<section droppable="true">
+				<div>
+					<span ng-repeat="name in items">
+						<img  src='{{name}}'/>
+					</span>
+				</div>
+			</section>
+		</div>
+	</div>
+</body>
+</html>
